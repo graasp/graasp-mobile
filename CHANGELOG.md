@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/graasp/graasp-mobile/compare/v1.5.2...v1.6.0) (2024-07-24)
+
+
+### Features
+
+* translate ar.json via GitLocalize ([#227](https://github.com/graasp/graasp-mobile/issues/227)) ([a735fcc](https://github.com/graasp/graasp-mobile/commit/a735fcc2f80473237d68d93f5de24f997f557e5e))
+* translate it.json via GitLocalize ([#232](https://github.com/graasp/graasp-mobile/issues/232)) ([240c31d](https://github.com/graasp/graasp-mobile/commit/240c31db928fef55f9827d961a15de4d7e436c75))
+
 ## [1.5.2](https://github.com/graasp/graasp-mobile/compare/v1.5.1...v1.5.2) (2024-07-01)
 
 
