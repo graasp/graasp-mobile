@@ -83,8 +83,20 @@
   "GO_TO_LINK_INPUT": "link",
   "I already have an account": "Ho già un account",
   "Create a new account": "Creare un nuovo account",
+  "CONTINUE_NO_ACCOUNT_BUTTON": "Continua senza un account",
   "Add to Bookmarks": "Aggiungi ai segnalibri",
   "Remove from Bookmarks": "Rimuovi dai segnalibri",
   "Content": "Contenuto",
-  "Type something....": "Scrivi qualcosa..."
+  "Type something....": "Scrivi qualcosa...",
+  "The item cannot be opened in the mobile app": "Impossibile aprire l'elemento {{type}} nell'app mobile",
+  "Please add support for this item": "Aggiungi il supporto per questo elemento",
+  "ITEM_UNSUPPORTED_MESSAGE": "Il tipo di elemento {{type}} non è attualmente supportato nell'app mobile. Puoi farci sapere che il supporto di questo articolo è importante per te facendo clic sul pulsante in basso. Grazie per il tuo feedback.",
+  "Close": "Vicino",
+  "REQUEST_ITEM_SUPPORT_ALERT_TITLE": "Richiesta inviata!",
+  "REQUEST_ITEM_SUPPORT_ALERT_MESSAGE": "La richiesta è stata inviata con successo.",
+  "Open Chatbox": "Apri Chatbox",
+  "Open Map": "Apri mappa",
+  "My Map": "La mia mappa",
+  "Show QR code": "Mostra il codice QR",
+  "FOLDER_CONTAINS_ONLY_FOLDERS": "{{title}} contiene solo cartelle.\nFare clic sul pulsante in basso per passare al contenuto successivo."
 }
