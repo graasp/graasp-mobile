@@ -2469,9 +2469,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/cli@npm:0.17.12":
-  version: 0.17.12
-  resolution: "@expo/cli@npm:0.17.12"
+"@expo/cli@npm:0.17.13":
+  version: 0.17.13
+  resolution: "@expo/cli@npm:0.17.13"
   dependencies:
     "@babel/runtime": "npm:^7.20.0"
     "@expo/code-signing-certificates": "npm:0.0.5"
@@ -2481,7 +2481,7 @@ __metadata:
     "@expo/env": "npm:~0.2.2"
     "@expo/image-utils": "npm:^0.4.0"
     "@expo/json-file": "npm:^8.2.37"
-    "@expo/metro-config": "npm:~0.17.0"
+    "@expo/metro-config": "npm:0.17.8"
     "@expo/osascript": "npm:^2.0.31"
     "@expo/package-manager": "npm:^1.1.1"
     "@expo/plist": "npm:^0.1.0"
@@ -2551,7 +2551,7 @@ __metadata:
     ws: "npm:^8.12.1"
   bin:
     expo-internal: build/bin/cli
-  checksum: 10/affd150e10557fe03fe20666b87e776951d78884b347db82cab6752e646643ff8646c9fbb658e5f1f6b79bef8906a08e6576031010cf03f3108a818e42aa86ef
+  checksum: 10/b0ef795ea1179a6c91dd50d74db31f9e2c84f59a0ce203973c8cf0726c94dbd5c45ec2a0421848797ac0c920fa29979d1226b25b8f1245f907486b60543743a8
   languageName: node
   linkType: hard
 
@@ -2789,9 +2789,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/metro-config@npm:0.17.7":
-  version: 0.17.7
-  resolution: "@expo/metro-config@npm:0.17.7"
+"@expo/metro-config@npm:0.17.8":
+  version: 0.17.8
+  resolution: "@expo/metro-config@npm:0.17.8"
   dependencies:
     "@babel/core": "npm:^7.20.0"
     "@babel/generator": "npm:^7.20.5"
@@ -2815,11 +2815,11 @@ __metadata:
     sucrase: "npm:3.34.0"
   peerDependencies:
     "@react-native/babel-preset": "*"
-  checksum: 10/33723a6a83e71c9253f19fbdbf88d554468df625a9986453d72b0dcded3da75ee184eeae5212abd7ca05441a2bd37943ece9554267557281379bb0ff7bae8657
+  checksum: 10/0e9cc814eca32df4e3fb342f4ee704ea266540154d6bb78ac8d20536303dc24574852300e67d27fa54b6ac411d641362e4d72cfbb67829705fafbda465397fcb
   languageName: node
   linkType: hard
 
-"@expo/metro-config@npm:~0.17.0, @expo/metro-config@npm:~0.17.1":
+"@expo/metro-config@npm:~0.17.1":
   version: 0.17.5
   resolution: "@expo/metro-config@npm:0.17.5"
   dependencies:
@@ -8320,12 +8320,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo-modules-core@npm:1.11.13":
-  version: 1.11.13
-  resolution: "expo-modules-core@npm:1.11.13"
+"expo-modules-core@npm:1.11.14":
+  version: 1.11.14
+  resolution: "expo-modules-core@npm:1.11.14"
   dependencies:
     invariant: "npm:^2.2.4"
-  checksum: 10/47bb33281d0a5025ab25ecdfdfda1ae8c8daa159fd90b2a6ef8505a8fd361ec6b0d68d576320e20bd2abb715eb3541b36e1f31fcfe2182091b30f1ee800895c7
+  checksum: 10/526356959265e4854f44744f537db4ef5581f28eb036ed9ccd8c7ab784ea9e780c0581e1aafd93f9cdf7aef42af55de8b5f2a5e3c9002ca67905b473b5b1223e
   languageName: node
   linkType: hard
 
@@ -8398,15 +8398,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo@npm:~50.0.19":
-  version: 50.0.19
-  resolution: "expo@npm:50.0.19"
+"expo@npm:~50.0.20":
+  version: 50.0.21
+  resolution: "expo@npm:50.0.21"
   dependencies:
     "@babel/runtime": "npm:^7.20.0"
-    "@expo/cli": "npm:0.17.12"
+    "@expo/cli": "npm:0.17.13"
     "@expo/config": "npm:8.5.6"
     "@expo/config-plugins": "npm:7.9.2"
-    "@expo/metro-config": "npm:0.17.7"
+    "@expo/metro-config": "npm:0.17.8"
     "@expo/vector-icons": "npm:^14.0.0"
     babel-preset-expo: "npm:~10.0.2"
     expo-asset: "npm:~9.0.2"
@@ -8414,12 +8414,12 @@ __metadata:
     expo-font: "npm:~11.10.3"
     expo-keep-awake: "npm:~12.8.2"
     expo-modules-autolinking: "npm:1.10.3"
-    expo-modules-core: "npm:1.11.13"
+    expo-modules-core: "npm:1.11.14"
     fbemitter: "npm:^3.0.0"
     whatwg-url-without-unicode: "npm:8.0.0-3"
   bin:
     expo: bin/cli
-  checksum: 10/ac2beb70de946cc51b3104f118a9757ee5ae740986a008ff5ed77b4ec3ea2ef24b5d192e80c9c2e51cde6f86cd79a15bb460543d9f996592df1735abc381c970
+  checksum: 10/baab92fd9b2b20c0dec795030f8ee51f3d6cb225709d4bfa20fb583bd1cea38e02d9601dbc520e711fb439e420b567517ac121bb8fb8e79c539df6311561af79
   languageName: node
   linkType: hard
 
@@ -9185,7 +9185,7 @@ __metadata:
     eslint-config-universe: "npm:^12.0.0"
     eslint-plugin-import: "npm:^2.29.0"
     eslint-plugin-jsx-a11y: "npm:^6.8.0"
-    expo: "npm:~50.0.19"
+    expo: "npm:~50.0.20"
     expo-asset: "npm:~9.0.2"
     expo-av: "npm:~13.10.6"
     expo-build-properties: "npm:~0.11.1"

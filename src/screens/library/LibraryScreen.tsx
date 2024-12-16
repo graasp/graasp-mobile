@@ -8,17 +8,15 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
-import { Category, CategoryType, DiscriminatedItem } from '@graasp/sdk';
+import { DiscriminatedItem } from '@graasp/sdk';
 
 import { LIBRARY_SEARCH_BAR } from '../../../e2e/constants/testIds';
 import ActivityIndicator from '../../components/ActivityIndicator';
 import { DEFAULT_LIBRARY_SEARCH_KEYWORDS } from '../../config/env';
-import { useQueryClient } from '../../context/QueryClientContext';
+import { useSearchPublishedItems } from '../../hooks/search';
 import CollectionCard from './CollectionCard';
-import SearchFilterButton from './SearchFilterButton';
 
 const LibraryScreen = () => {
-  const { hooks } = useQueryClient();
   const { t } = useTranslation();
 
   const insets = useSafeAreaInsets();
@@ -33,22 +31,15 @@ const LibraryScreen = () => {
     DEFAULT_LIBRARY_SEARCH_KEYWORDS,
   );
   const dimensions = useWindowDimensions();
-  const [filters, setFilters] = useState<Category['id'][][]>(
-    Array.from({ length: Object.values(CategoryType).length }, () => []),
-  );
-  const { data: collections, isLoading } = hooks.useSearchPublishedItems({
+  const { data: collections, isLoading } = useSearchPublishedItems({
     query: searchKeywords,
-    categories: filters.filter((a) => a.length),
     page,
     sort: ['createdAt:desc'],
     // // does not show children
     isPublishedRoot: true,
   });
 
-  const allCollections = prevResults.concat(
-    // @ts-ignore todo fix type
-    collections?.results?.[0]?.hits ?? [],
-  );
+  const allCollections = prevResults.concat(collections?.hits ?? []);
 
   const onSearch = (s: string) => {
     setSearchKeywords(s);
@@ -108,7 +99,6 @@ const LibraryScreen = () => {
         round
         testID={LIBRARY_SEARCH_BAR}
       />
-      <SearchFilterButton currentSelection={filters} onSave={setFilters} />
       {renderContent()}
     </SafeAreaView>
   );
