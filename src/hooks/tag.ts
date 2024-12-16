@@ -6,6 +6,7 @@ import { UUID } from '@graasp/sdk';
 import axios from 'axios';
 
 import { API_HOST } from '../config/env';
+import { Tag } from '../config/types';
 
 export const buildGetTagsByItemRoute = ({ itemId }: { itemId: UUID }) => {
   return `${API_HOST}/items/${itemId}/tags`;
@@ -13,7 +14,7 @@ export const buildGetTagsByItemRoute = ({ itemId }: { itemId: UUID }) => {
 
 export const getTagsByItem = async (args: any) => {
   return axios
-    .get(`${API_HOST}/${buildGetTagsByItemRoute(args)}`)
+    .get<Tag[]>(`${API_HOST}/${buildGetTagsByItemRoute(args)}`)
     .then(({ data }) => data);
 };
 
