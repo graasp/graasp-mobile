@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.6.0](https://github.com/graasp/graasp-mobile/compare/v1.5.2...v1.6.0) (2024-12-16)
+
+
+### Features
+
+* remove categories and use tags, update search ([#233](https://github.com/graasp/graasp-mobile/issues/233)) ([27a594f](https://github.com/graasp/graasp-mobile/commit/27a594fb87221a6a03f2c0e0775c150776d1dfe3))
+* translate ar.json via GitLocalize ([#227](https://github.com/graasp/graasp-mobile/issues/227)) ([a735fcc](https://github.com/graasp/graasp-mobile/commit/a735fcc2f80473237d68d93f5de24f997f557e5e))
+* translate de.json via GitLocalize ([#230](https://github.com/graasp/graasp-mobile/issues/230)) ([13541df](https://github.com/graasp/graasp-mobile/commit/13541df27591583abc4140d3967b4760971b6a85))
+* translate it.json via GitLocalize ([#232](https://github.com/graasp/graasp-mobile/issues/232)) ([240c31d](https://github.com/graasp/graasp-mobile/commit/240c31db928fef55f9827d961a15de4d7e436c75))
+
 ## [1.5.2](https://github.com/graasp/graasp-mobile/compare/v1.5.1...v1.5.2) (2024-07-01)
 
 
