@@ -1,13 +1,12 @@
 import { View, useWindowDimensions } from 'react-native';
 import { Card } from 'react-native-elements';
 
-import { DiscriminatedItem } from '@graasp/sdk';
-
+import { IndexItem } from '../../config/types';
 import { useQueryClient } from '../../context/QueryClientContext';
 import DefaultImage from './DefaultImage';
 
 type Props = {
-  item: DiscriminatedItem;
+  item: IndexItem;
 };
 
 function CollectionThumbnail({ item }: Props) {

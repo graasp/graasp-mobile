@@ -1,11 +1,10 @@
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Card } from 'react-native-elements';
 
-import { DiscriminatedItem } from '@graasp/sdk';
-
 import { useNavigation } from '@react-navigation/native';
 
 import { buildLibraryCardId } from '../../../e2e/constants/testIds';
+import { IndexItem } from '../../config/types';
 import { LIBRARY_NAVIGATOR_COLLECTION } from '../../navigation/names';
 import { LibraryScreenProp } from '../../navigation/types';
 import CollectionCreator from './CollectionCreator';
@@ -13,7 +12,7 @@ import CollectionThumbnail from './CollectionThumbnail';
 import Tags from './Tags';
 
 type Props = {
-  item: DiscriminatedItem;
+  item: IndexItem;
 };
 
 const CollectionCard = ({ item }: Props) => {

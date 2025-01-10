@@ -3,6 +3,7 @@ import { Avatar, Text } from 'react-native-elements';
 
 import { DiscriminatedItem } from '@graasp/sdk';
 
+import { IndexItem } from '../../config/types';
 import { useQueryClient } from '../../context/QueryClientContext';
 
 export const DEFAULT_MEMBER_THUMBNAIL = `data:image/svg+xml,${encodeURIComponent(`
@@ -11,7 +12,7 @@ export const DEFAULT_MEMBER_THUMBNAIL = `data:image/svg+xml,${encodeURIComponent
 </svg>`)}`;
 
 type Props = {
-  item: DiscriminatedItem;
+  item: IndexItem;
 };
 
 function CollectionCreator({ item }: Props) {

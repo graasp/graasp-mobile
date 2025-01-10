@@ -8,11 +8,10 @@ import {
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
-import { DiscriminatedItem } from '@graasp/sdk';
-
 import { LIBRARY_SEARCH_BAR } from '../../../e2e/constants/testIds';
 import ActivityIndicator from '../../components/ActivityIndicator';
 import { DEFAULT_LIBRARY_SEARCH_KEYWORDS } from '../../config/env';
+import { IndexItem } from '../../config/types';
 import { useSearchPublishedItems } from '../../hooks/search';
 import CollectionCard from './CollectionCard';
 
@@ -21,7 +20,7 @@ const LibraryScreen = () => {
 
   const insets = useSafeAreaInsets();
   const [page, setPage] = useState<number>(1);
-  const [prevResults, setPrevResults] = useState<DiscriminatedItem[]>([]);
+  const [prevResults, setPrevResults] = useState<IndexItem[]>([]);
   const [
     hasEndReachedCalledDuringMomentum,
     sethasEndReachedCalledDuringMomentum,

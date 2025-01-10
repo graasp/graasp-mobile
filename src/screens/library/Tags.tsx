@@ -1,21 +1,27 @@
 import { StyleSheet, View } from 'react-native';
 import { Chip } from 'react-native-elements';
 
-import { DiscriminatedItem, IndexItem } from '@graasp/sdk';
-
 import { PRIMARY_COLOR } from '../../config/constants/constants';
-import { useTagsByItem } from '../../hooks/tag';
+import { IndexItem, TagCategory } from '../../config/types';
 
 type Props = {
-  item: DiscriminatedItem | IndexItem;
+  readonly item: IndexItem;
 };
 
 function Tags({ item }: Props) {
-  const { data: tags } = useTagsByItem({ itemId: item.id });
+  const tags = Object.values(TagCategory)
+    .flatMap((category: string) => {
+      if (`${category}` in item) {
+        // @ts-expect-error
+        return collection[category] ?? [];
+      }
+      return [];
+    })
+    .toSorted((a, b) => (a > b ? 1 : -1));
 
-  const tagComponents = tags?.map(({ name, id }) => (
+  const tagComponents = tags?.map((name, idx) => (
     <Chip
-      key={id}
+      key={`${name}-${idx}`}
       // need both styles to apply correctly
       titleStyle={styles.chip}
       buttonStyle={styles.chip}
