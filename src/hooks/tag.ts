@@ -14,14 +14,15 @@ export const getTagsByItem = async ({ itemId }: { itemId: UUID }) => {
     .then(({ data }) => data);
 };
 
-export const useTagsByItem = ({ itemId }: { itemId: UUID }) => {
+export const useTagsByItem = ({ itemId }: { itemId?: UUID }) => {
   return useQuery({
     queryKey: ['items', itemId, 'tags'],
     queryFn: () => {
       if (!itemId) {
         console.error('error on getting tags');
+      } else {
+        return getTagsByItem({ itemId });
       }
-      return getTagsByItem({ itemId });
     },
     enabled: Boolean(itemId),
   });
