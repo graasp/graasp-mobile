@@ -21,15 +21,14 @@ const CollectionCard = ({ item }: Props) => {
   const { navigate } =
     useNavigation<LibraryScreenProp<'CollectionStack'>['navigation']>();
 
-  const tags = Object.values(TagCategory)
-    .flatMap((category: string) => {
-      if (`${category}` in item) {
-        // @ts-expect-error
-        return collection[category] ?? [];
-      }
-      return [];
-    })
-    .toSorted((a, b) => (a > b ? 1 : -1));
+  const tags = Object.values(TagCategory).flatMap((category: string) => {
+    if (`${category}` in item) {
+      // @ts-expect-error
+      return item[category] ?? [];
+    }
+    return [];
+  });
+  tags.sort((a, b) => (a > b ? 1 : -1));
 
   return (
     <TouchableOpacity

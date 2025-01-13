@@ -40,6 +40,9 @@ const CollectionScreen = ({
   if (item) {
     setOptions({ title: item.name });
 
+    const sortedTags = tags?.map(({ name }) => name) ?? [];
+    sortedTags.sort();
+
     return (
       <SafeAreaView edges={['left']}>
         <ScrollView style={{ backgroundColor: 'white' }}>
@@ -57,7 +60,7 @@ const CollectionScreen = ({
               <CollectionCreator item={item} />
               <CollectionScreenOptions item={item} />
             </View>
-            <Tags tags={tags?.map(({ name }) => name) ?? []} />
+            <Tags tags={sortedTags} />
             {item.description && (
               <RenderHTML
                 defaultTextProps={{ numberOfLines: 2 }}

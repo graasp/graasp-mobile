@@ -10,7 +10,7 @@ import { Tag } from '../config/types';
 
 export const getTagsByItem = async ({ itemId }: { itemId: UUID }) => {
   return axios
-    .get<Tag[]>(`${API_HOST}/items/${itemId}/tags}`)
+    .get<Tag[]>(`${API_HOST}/items/${itemId}/tags`)
     .then(({ data }) => data);
 };
 

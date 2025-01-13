@@ -41,7 +41,7 @@ export const SEARCH_PUBLISHED_ITEMS_ROUTE = `items/collections/search`;
 
 export const searchPublishedItems = async (query: MeiliSearchProps) => {
   return axios
-    .post(`${API_HOST}/${SEARCH_PUBLISHED_ITEMS_ROUTE}`, query)
+    .post(`${API_HOST}/items/collections/search`, query)
     .then(({ data }: any) => data);
 };
 
