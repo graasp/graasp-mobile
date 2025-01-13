@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/graasp/graasp-mobile/compare/v1.6.0...v1.6.1) (2025-01-13)
+
+
+### Bug Fixes
+
+* fix tags endpoint and optimise tag display ([#235](https://github.com/graasp/graasp-mobile/issues/235)) ([8f85571](https://github.com/graasp/graasp-mobile/commit/8f85571c7fd01f215903baeb5da48cf33dede924))
+
 ## [1.6.0](https://github.com/graasp/graasp-mobile/compare/v1.5.2...v1.6.0) (2024-12-16)
 
 
