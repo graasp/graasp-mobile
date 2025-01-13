@@ -6,6 +6,7 @@ import { DiscriminatedItem } from '@graasp/sdk';
 import { useNavigation } from '@react-navigation/native';
 
 import { buildLibraryCardId } from '../../../e2e/constants/testIds';
+import { TagCategory } from '../../config/types';
 import { LIBRARY_NAVIGATOR_COLLECTION } from '../../navigation/names';
 import { LibraryScreenProp } from '../../navigation/types';
 import CollectionCreator from './CollectionCreator';
@@ -19,6 +20,15 @@ type Props = {
 const CollectionCard = ({ item }: Props) => {
   const { navigate } =
     useNavigation<LibraryScreenProp<'CollectionStack'>['navigation']>();
+
+  const tags = Object.values(TagCategory).flatMap((category: string) => {
+    if (`${category}` in item) {
+      // @ts-expect-error
+      return item[category] ?? [];
+    }
+    return [];
+  });
+  tags.sort((a, b) => (a > b ? 1 : -1));
 
   return (
     <TouchableOpacity
@@ -35,7 +45,7 @@ const CollectionCard = ({ item }: Props) => {
             {item.name}
           </Card.Title>
           <CollectionCreator item={item} />
-          <Tags item={item} />
+          <Tags tags={tags} />
         </View>
       </Card>
     </TouchableOpacity>

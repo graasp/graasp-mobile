@@ -15,6 +15,7 @@ import ActivityIndicator from '../../components/ActivityIndicator';
 import { DEFAULT_LOCALE } from '../../config/constants/constants';
 import i18n from '../../config/i18n';
 import { useQueryClient } from '../../context/QueryClientContext';
+import { useTagsByItem } from '../../hooks/tag';
 import { LibraryScreenProp } from '../../navigation/types';
 import CollectionContent from './CollectionContent';
 import CollectionCreator from './CollectionCreator';
@@ -34,9 +35,13 @@ const CollectionScreen = ({
   const tabHeight = useBottomTabBarHeight();
   const { data: item, isLoading } = hooks.useItem(itemId);
   const { setOptions } = useNavigation();
+  const { data: tags } = useTagsByItem({ itemId: item?.id });
 
   if (item) {
     setOptions({ title: item.name });
+
+    const sortedTags = tags?.map(({ name }) => name) ?? [];
+    sortedTags.sort();
 
     return (
       <SafeAreaView edges={['left']}>
@@ -55,7 +60,7 @@ const CollectionScreen = ({
               <CollectionCreator item={item} />
               <CollectionScreenOptions item={item} />
             </View>
-            <Tags item={item} />
+            <Tags tags={sortedTags} />
             {item.description && (
               <RenderHTML
                 defaultTextProps={{ numberOfLines: 2 }}
