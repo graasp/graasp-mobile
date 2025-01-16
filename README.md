@@ -143,6 +143,10 @@ This file can be added to [the Transporter app](https://apps.apple.com/us/app/tr
 
 For beta testing, you can deliver the app on Testflight, and chosen testers will be able to install the app on their iOS phone. The build number should be bumped each time you deploy a new build, but you can keep the same main version number.
 
+##### Expired Provision Profile
+
+If the provision profile is expired, you can re-sign it if you sign in with your apple account while building the app using `yarn build:ios:prod`. It's easier if you run this command locally. Once run, even if the final build fails, your profile should have been re-signed and valid (you can find your valid profiles on `developer.apple.com` > `Certificates, Identifiers & Profiles`).
+
 #### Android
 
 You can either generate a `.apk` file so users can install it directly on their devices, or a `.aab` file that can be submitted to the PlayStore and downloaded by internal testers.
