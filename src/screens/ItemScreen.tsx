@@ -72,7 +72,7 @@ const ItemScreen = ({ route }: ItemScreenProps<'ItemStackItem'>) => {
       case ItemType.LINK: {
         return <LinkItem item={item} />;
       }
-      case ItemType.S3_FILE: {
+      case ItemType.LOCAL_FILE: {
         return <FileItem item={item} />;
       }
       default: {

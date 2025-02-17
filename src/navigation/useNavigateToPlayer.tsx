@@ -39,6 +39,7 @@ export const useNavigateToPlayer = () => {
       case ItemType.LINK:
       case ItemType.APP:
       case ItemType.DOCUMENT:
+      case ItemType.LOCAL_FILE:
       case ItemType.S3_FILE:
         navigate(ITEM_NAVIGATOR, {
           screen: ITEM_NAVIGATOR_ITEM,

@@ -2,11 +2,7 @@ import { FC, useEffect, useState } from 'react';
 
 import * as Sharing from 'expo-sharing';
 
-import {
-  DiscriminatedItem,
-  S3FileItemExtra,
-  getS3FileExtra,
-} from '@graasp/sdk';
+import { LocalFileItemType } from '@graasp/sdk';
 
 import { ANALYTICS_EVENTS, MIME_TYPES } from '../config/constants/constants';
 import { useQueryClient } from '../context/QueryClientContext';
@@ -20,7 +16,7 @@ import FileUnsupported from './FileUnsupported';
 import FileVideo from './FileVideo';
 
 interface FileItemProps {
-  item: DiscriminatedItem;
+  item: LocalFileItemType;
   isPlayerView?: boolean;
 }
 
@@ -29,8 +25,7 @@ const FileItem: FC<FileItemProps> = ({ item, isPlayerView = false }) => {
   const [filePath, setFilePath] = useState<string | undefined>(undefined);
   const { hooks } = useQueryClient();
 
-  const extra = getS3FileExtra(item.extra as S3FileItemExtra);
-  const { mimetype } = extra ?? {};
+  const { mimetype } = item.extra.file ?? {};
 
   const { data: url } = hooks.useFileContentUrl(item.id);
 

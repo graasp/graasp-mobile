@@ -7,10 +7,9 @@ import {
   DiscriminatedItem,
   EmbeddedLinkItemExtra,
   ItemType,
+  LocalFileItemExtra,
   MimeTypes,
-  S3FileItemExtra,
   getEmbeddedLinkExtra,
-  getS3FileExtra,
 } from '@graasp/sdk';
 
 import { ITEMS_TABLE_ROW_ICON_COLOR } from '../config/constants/constants';
@@ -22,7 +21,6 @@ interface ItemIconProps {
   style?: any;
 }
 
-// TODO: use graasp-ui
 const ItemIcon = ({
   type,
   extra,
@@ -60,9 +58,8 @@ const ItemIcon = ({
     case ItemType.FOLDER:
       Icon = icons.FOLDER;
       break;
-    case ItemType.LOCAL_FILE:
-    case ItemType.S3_FILE: {
-      const mimetype = getS3FileExtra(extra as S3FileItemExtra)?.mimetype;
+    case ItemType.LOCAL_FILE: {
+      const mimetype = (extra as LocalFileItemExtra).file.mimetype;
       if (MimeTypes.isImage(mimetype)) {
         Icon = icons.IMAGE;
         break;

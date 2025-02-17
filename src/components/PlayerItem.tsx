@@ -23,7 +23,7 @@ const PlayerItem: FC<PlayerItemProps> = ({ item }) => {
     case ItemType.LINK: {
       return <LinkItem item={item} isPlayerView={true} />;
     }
-    case ItemType.S3_FILE: {
+    case ItemType.LOCAL_FILE: {
       return <FileItem item={item} isPlayerView={true} />;
     }
     default: {
