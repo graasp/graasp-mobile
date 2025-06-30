@@ -1,3 +1,7 @@
+> [!WARNING]
+> This repository is archived, since the development of the mobile application has been stopped.
+> You can use the web version on mobile since it is responsive.
+
 # Graasp Mobile
 
 <a href="https://gitlocalize.com/repo/9168?utm_source=badge"> <img src="https://gitlocalize.com/repo/9168/whole_project/badge.svg" /> </a>
